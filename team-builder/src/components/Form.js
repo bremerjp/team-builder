@@ -18,7 +18,7 @@ const TeamForm = ({ addTeamMember }) => {
 
   return (
     <form className="form" onSubmit={submitForm}>
-      <label htmlFor="name">Name</label>
+      <label htmlFor="name">Name:</label>
       <input
         id="name"
         type="text"
@@ -27,7 +27,7 @@ const TeamForm = ({ addTeamMember }) => {
         onChange={handleChanges}
         value={TeamMember.name}
       />
-      <label htmlFor="email">Email</label>
+      <label htmlFor="email">Email:</label>
       <input
         id="email"
         type="email"
@@ -36,7 +36,7 @@ const TeamForm = ({ addTeamMember }) => {
         onChange={handleChanges}
         value={TeamMember.email}
       />
-      <label htmlFor="role">Role</label>
+      <label htmlFor="role">Role:</label>
       <input
         id="role"
         type="text"

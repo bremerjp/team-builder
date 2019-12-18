@@ -9,7 +9,7 @@ function App() {
   const [teamData, setTeamData] = useState([
     {
       name: "Jacob Bremer",
-      email: "bremerjp@gmail.com",
+      email: "Jacob@gmail.com",
       role: "Full Stack Developer"
     },
     {
@@ -26,7 +26,18 @@ function App() {
       name: "Igor Atakhanov",
       email: "Igor@gmail.com",
       role: "Full Stack Developer"
+    },
+    {
+      name: "Gerard Crockenberg II",
+      email: "Gerard@gmail.com",
+      role: "Full Stack Developer"
+    },
+    {
+      name: "Hudson Chamberlain",
+      email: "Hudson@gmail.com",
+      role: "Full Stack Developer"
     }
+
   ]);
 
   const addTeamMember = teamMember => {
