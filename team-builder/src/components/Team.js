@@ -2,7 +2,7 @@ import React from "react";
 
 const Team = props => {
   return (
-    <div>
+    <div className="team">
       {props.team.map(member => (
         <div key={member.id}>
           <h2>{member.name}</h2>
