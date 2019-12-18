@@ -1,24 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Form from "./components/Form";
+import Team from "./components/Team";
+
+import "./App.css";
 
 function App() {
+  const [teamData, setTeamData] = useState([
+    {
+      name: "Jacob Bremer",
+      email: "bremerjp@gmail.com",
+      role: "Full Stack Developer"
+    },
+    {
+      name: "Nicholas Sandomeno",
+      email: "Nicholas@gmail.com",
+      role: "Full Stack Developer"
+    },
+    {
+      name: "Michael Phelps",
+      email: "Michael@gmail.com",
+      role: "Full Stack Developer"
+    },
+    {
+      name: "Igor Atakhanov",
+      email: "Igor@gmail.com",
+      role: "Full Stack Developer"
+    }
+  ]);
+
+  const addTeamMember = teamMember => {
+    const newTeamMember = {
+      id: Date.now(),
+      name: teamMember.name,
+      email: teamMember.email,
+      role: teamMember.role
+    };
+    const newMembers = [...teamData, newTeamMember];
+    setTeamData(newMembers);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Team</h1>
+      <Form addTeamMember={addTeamMember} />
+      <Team team={teamData} />
     </div>
   );
 }
